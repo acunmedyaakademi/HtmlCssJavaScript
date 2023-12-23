@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vücut Kitle İndeksi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="weight">Kilo (kg):</label>
+                <input type="number" id="weight" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <label for="height">Boy (m):</label>
+                <input type="number" id="height" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <button onclick="hesaplaBMI()" class="btn btn-primary mt-4">BMI Hesapla</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <p id="bmiResult" class="form-control"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function hesaplaBMI() {
+            var weight = parseFloat(document.getElementById("weight").value);
+            var height = parseFloat(document.getElementById("height").value);
+            var bmi = weight / (height * height);
+            document.getElementById("bmiResult").innerText = "BMI: " + bmi.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

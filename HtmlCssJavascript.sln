@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlCssJavascript", "HtmlCssJavascript\HtmlCssJavascript.csproj", "{ABEE9A97-EFCB-4F52-86E8-4DDD8BD0AAF0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A28FF94-4AC3-46D6-A5FB-F84BCAB217EC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1D11DF73-11B5-4E46-8188-3D5816B3820E}"
 	ProjectSection(SolutionItems) = preProject
-		HTMLPage1.html = HTMLPage1.html
+		HTMLPage3.html = HTMLPage3.html
 	EndProjectSection
 EndProject
 Global
