@@ -8,6 +8,19 @@
         .list-group-item.done {
             text-decoration: line-through;
         }
+
+        .list-group-item.low {
+            background-color: #ffd800; /* Önemsiz */
+        }
+
+        .list-group-item.medium {
+            background-color: #ff6a00; /* Normal */
+        }
+
+        .list-group-item.high {
+            background-color: #ff0000; /* Çok Önemli */
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -23,6 +36,7 @@
                     <button onclick="sil()" class="btn btn-danger mt-2">Seçili Notu Sil</button>
                     <button onclick="duzenle()" class="btn btn-warning mt-2">Seçili Notu Düzenle</button>
                     <button onclick="yapildi()" class="btn btn-success mt-2">Seçili Notu Yapıldı Olarak İşaretle</button>
+                    <button onclick="onemli()" class="btn btn-info mt-2">Seçili Notu Önemli Olarak İşaretle</button>
                 </div>
             </div>
         </div>
@@ -84,6 +98,30 @@
 
             if (selectedNote) {
                 selectedNote.classList.toggle("done");
+            } else {
+                alert("Lütfen işaretlemek istediğiniz notu seçin.");
+            }
+        }
+
+
+        function onemli() {
+            var selectedNote = document.querySelector(".list-group-item.active");
+
+            if (selectedNote) {
+               
+                selectedNote.classList.remove("low", "medium", "high");
+
+              
+                var importanceLevel = prompt("Notun önem seviyesini belirtin: (1: Önemsiz, 2: Normal, 3: Çok Önemli)");
+
+                if (importanceLevel === "1") {
+                    selectedNote.classList.add("low");
+                } else if (importanceLevel === "3") {
+                    selectedNote.classList.add("high");
+                } else {
+                    
+                    selectedNote.classList.add("medium");
+                }
             } else {
                 alert("Lütfen işaretlemek istediğiniz notu seçin.");
             }
