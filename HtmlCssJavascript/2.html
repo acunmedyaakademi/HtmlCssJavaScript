@@ -54,6 +54,13 @@
         function kaydet() {
             var noteText = document.getElementById("note").value.trim();
 
+           
+            var wordCount = noteText.split(/\s+/).length;
+            if (wordCount > 5) {
+                alert("Notunuz en fazla 5 kelime içermelidir.");
+                return;
+            }
+
             if (noteText === "") {
                 alert("Lütfen bir not girin.");
                 return;
@@ -62,12 +69,13 @@
             var noteList = document.getElementById("noteList");
             var listItem = document.createElement("li");
             listItem.appendChild(document.createTextNode(noteText));
-            listItem.className = "list-group-item";
+            listItem.className = "list-group-item medium"; 
             noteList.appendChild(listItem);
 
-
+           
             document.getElementById("note").value = "";
         }
+
 
         function sil() {
             var selectedNote = document.querySelector(".list-group-item.active");
